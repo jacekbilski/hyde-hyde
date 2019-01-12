@@ -1,0 +1,21 @@
+{{ if in .Page.Params.dependencies "patches" }}
+<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/diff2html@3.1.12/bundles/css/diff2html.min.css'/>
+<style type='text/css'>
+.d2h-wrapper {
+    color: black;
+    background: white;
+    line-height: normal;
+}
+.d2h-wrapper td {
+    padding: 0;
+    border: none;
+}
+.d2h-wrapper table {
+    margin-bottom: 0;
+}
+.d2h-file-diff {
+    overflow-x: auto;
+}
+</style>
+<script src='https://cdn.jsdelivr.net/npm/diff2html@3.1.12/bundles/js/diff2html.min.js'></script>
+{{ end }}
