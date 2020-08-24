@@ -30,6 +30,10 @@
     {{ end }}
     {{ end }}
     <br/>
-    <i class="fas fa-clock"></i> {{ .ReadingTime }} min read
+    {{ if eq .Params.type "video" }}
+        <i class="fas fa-clock"></i> length: {{ .Params.length }}
+    {{ else }}
+        <i class="fas fa-clock"></i> {{ .ReadingTime }} min read
+    {{ end }}
 </div>
 {{ end }}
